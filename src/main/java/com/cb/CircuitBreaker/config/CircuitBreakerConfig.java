@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "circuit.breaker")
 public class CircuitBreakerConfig {
-    
     private double failureRateThreshold;
     private int minimumNumberOfCalls;
     private int slidingWindowSize;
