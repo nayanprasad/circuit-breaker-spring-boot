@@ -1,6 +1,7 @@
 package com.cb.CircuitBreaker.service;
 
 import com.cb.CircuitBreaker.config.CircuitBreakerConfig;
+import com.cb.CircuitBreaker.model.CircuitBreakerState;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

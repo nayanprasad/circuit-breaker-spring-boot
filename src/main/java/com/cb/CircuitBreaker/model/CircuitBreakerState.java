@@ -1,9 +1,7 @@
-package com.cb.CircuitBreaker.service;
+package com.cb.CircuitBreaker.model;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -55,10 +53,10 @@ public class CircuitBreakerState {
     private volatile LocalDateTime lastOpenTime;
 
     public CircuitBreakerState(double failureRateThreshold,
-                              int minimumNumberOfCalls,
-                              int slidingWindowSize,
-                              int waitDurationInOpenStateSeconds,
-                              int permittedNumberOfCallsInHalfOpenState) {
+                               int minimumNumberOfCalls,
+                               int slidingWindowSize,
+                               int waitDurationInOpenStateSeconds,
+                               int permittedNumberOfCallsInHalfOpenState) {
         this.failureRateThreshold = failureRateThreshold;
         this.minimumNumberOfCalls = minimumNumberOfCalls;
         this.slidingWindowSize = slidingWindowSize;
